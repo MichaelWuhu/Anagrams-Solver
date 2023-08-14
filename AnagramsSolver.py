@@ -67,7 +67,7 @@ def onClick():
         # print(answer)    
         canvas.delete("all")  # Clear previous text on canvas
         canvas.create_text(300, 100, text=answer, fill="black", font=('Helvetica 10 bold'), width=550, anchor="center")
-        user_input.delete(0, tk.END)  # Clear the input textbox
+        # user_input.delete(0, tk.END)  # Clear the input textbox
 
 # THESE ARE FOR TESTING 'SOLVE' FUNCTION
 # letters = ['a','b','c','d','e','f']
