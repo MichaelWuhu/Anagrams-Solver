@@ -9,16 +9,24 @@ def valid_entry(input_letters):
         if i.isalpha():
             only_alpha.append(i)
     
-    if len(only_alpha) == 6:
-        return True
+    # BELOW IS ONLY IF lIMITING TO 6 LETTERS
+    #
+    # if len(only_alpha) == 6:
+    #     return True
 
-    showerror("Error", "Please enter 6 letters")
-    return False
+    # showerror("Error", "Please enter 6 letters")
+    # return False
+    
+    return True
 
 # solve function used to solve
 def solve(input_letters):
-    if not (len(input_letters) == 6):
-        return 
+    # only uncomment if want ONLY 6 letter inputs
+    #
+    # if not (len(input_letters) == 6):
+    #     return 
+    
+    
     
     # with open('TempWords.txt', 'r') as f: # opening the text file of words
     with open('Words.txt', 'r') as f:
@@ -83,7 +91,7 @@ form_frame.pack(padx=20, pady=20)
 title_label = tk.Label(form_frame, text="Anagrams Solver", font=("Helvetica", 48, "bold", "underline"))  # Increase font size
 title_label.grid(row=0, column=0, sticky="w", columnspan=2)
 
-user_input_label = tk.Label(form_frame, text="Enter 6 letters:", font=("Helvetica", 24))  # Increase font size
+user_input_label = tk.Label(form_frame, text="Enter letters:", font=("Helvetica", 24))  # Increase font size
 user_input_label.grid(row=1, column=0, sticky="w")  
 
 user_input = tk.Entry(form_frame, highlightthickness=2, highlightbackground="black", font=("Helvetica", 24))  # Increase font size and highlight thickness
